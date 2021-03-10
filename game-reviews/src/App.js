@@ -2,7 +2,9 @@ import React from "react";
 import {BrowserRouter as Router} from 'react-router-dom'
 import HomeBanner from "./components/home-banner"
 import Navbar from "./components/navbar"
+
 import './App.css';
+import CriticReview from "./components/criticReview";
 
 function App() {
   return (
