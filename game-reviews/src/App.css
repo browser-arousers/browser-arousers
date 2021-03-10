@@ -9,6 +9,8 @@ html {
 body {
   margin: 0;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background: var(--mainBckgr);
+  color: var(--darkFont);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,7 +18,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: none;
 }
-
 
 
 /***** Colours *****/
@@ -34,63 +35,53 @@ h1, h2, h3, h4, h5, h6 {
   --darkFont: #333; /* secondary font, dark grey icons, interaction bar */
   
   /* feature colors */
-
-
+  --reviewStars: yellow;
 }
 
 
 /***** Fonts *****/ 
-/* used for: main header, right sidebar header, messages header */
 
-/* h1 {
-  font-size: 19px;
-  font-weight: 800;
-  line-height: 25px;
-} */
-
-/* navbar on desktop,  */
-/* h2 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 25px;
-} */
-
-/* profile name, right sidebar title */
-/* h3 {
-  font-size: 15px;
+h1 {
+  font-size: 1.953rem;
   font-weight: 700;
-  line-height: 20px;
-} */
-
-/* main text/feed text */
-/* .mainText {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 20px;
-} */
-
-/* secondary text (dark grey) */
-/* .secondaryText {
-  color: var(--darkGrey);
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 20px;
-} */
-
-/* mentions, hashtags, show more on the sidebar */
-/* .blueText {
-  color: var(--blueAccent);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
 }
 
-.darkButton {
-  background: var(--secondaryBckgr);
-  color: var(--blueAccent); 
+h2 {
+  font-size: 1.563rem;
+  font-weight: 600;
 }
 
-.blueButton { 
-  background: var(--blueAccent);
-  color: var(--buttonFont);
+/* h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
 } */
+
+
+/***** Buttons *****/ 
+
+.btn {
+   font-size: 1.125rem;
+   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   cursor: pointer;
+   border: none;
+   padding: 2em 1em;
+}
+
+.btn-primary {
+  background: var(--greenAccent);
+  color: var(--lightFont); 
+}
+
+.btn-primary:hover {
+   background: var(--darkerGreen);
+ }
+
+.btn-secondary { 
+  background: var(--redAccent);
+  color: var(--lightFont);
+}
+
+.btn-secondary:hover {
+   background: var(--darkerRed);
+ }
