@@ -23,5 +23,9 @@ h3{
 
 p{
     font-size: 1rem;
-    color: black;
+    color: white;
+}
+
+li{
+    color: white;
 }
