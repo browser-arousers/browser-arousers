@@ -23,16 +23,19 @@ export default function Navbar() {
                     </div>
                     <ul className = {click? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
-                            <Link to = "/Home" className="nav-links"></Link>
+                            <Link to = "/Home" className="nav-links">
                             Home
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to = "/Signup" className="nav-links"></Link>
+                            <Link to = "/Signup" className="nav-links">
                             Sign Up
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to = "/Login" className="nav-links"></Link>
+                            <Link to = "/Login" className="nav-links">
                             Login
+                            </Link>
                         </li>
 
                     </ul>
