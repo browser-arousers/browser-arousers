@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -23,17 +23,17 @@ export default function Navbar() {
                     </div>
                     <ul className = {click? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
-                            <Link to = "/Home" className="nav-links">
+                            <Link to = "/Home" className="nav-links" onClick={closeMobileMenu}>
                             Home
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to = "/Signup" className="nav-links">
+                            <Link to = "/Signup" className="nav-links" onClick={closeMobileMenu}>
                             Sign Up
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to = "/Login" className="nav-links">
+                            <Link to = "/Login" className="nav-links" onClick={closeMobileMenu}>
                             Login
                             </Link>
                         </li>
