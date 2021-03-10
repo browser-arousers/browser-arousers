@@ -98,6 +98,7 @@ i{
     }
 
     .nav-menu.active{
+        background-color: black;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
