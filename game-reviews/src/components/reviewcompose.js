@@ -1,14 +1,29 @@
 import React, { useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import "./reviewcompose.css";
+import Review from "./game1review";
+
+const Review = Review.body;
+console.log(Review)
 
 const ReviewCompose = (props) => {
+
+const [reviewBody, setReview] = useState("");
+
+const handleTextUseChange = (onChangeEvent) =>
+  setReview(onChangeEvent.target.value);
+
+const handleSubmit = () => {
+  setReview("");
+}
+
+  constructor(props) {
+    super(props)
+  };
+
   return (
 
-
-
-
-    <div className="reviewCompse">
+    <div className="reviewCompose">
       {/* <div className="userPic">
                 <ProfilePicture src={somesourcehere} size="medium" />
             </div> */}
@@ -28,9 +43,7 @@ const ReviewCompose = (props) => {
             type="submit"
             //   disabled={!reviewBody}
             onClick={handleSubmit}
-          >
-            Submit
-          </button>
+          >Submit</button>
         </div>
       </div>
     </div>
