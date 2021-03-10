@@ -1,15 +1,18 @@
 import React from "react";
-import HomeBanner from "./components/home-banner";
-import Review from "./components/reviewcompose";
+import {BrowserRouter as Router} from 'react-router-dom'
+import HomeBanner from "./components/home-banner"
+import Navbar from "./components/navbar"
+
 import './App.css';
 import CriticReview from "./components/criticReview";
 
 function App() {
   return (
     <div className="App">
+      <Router>
+        <Navbar/>
       <HomeBanner />
-      <CriticReview />
-      <Review />
+      </Router>
     </div>
   );
 }
