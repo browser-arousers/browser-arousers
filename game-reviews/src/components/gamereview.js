@@ -3,6 +3,7 @@ import "./gamereview.css";
 // import fetch from "node-fetch";
 // import {useState, useEffect} from 'react';
 
+
 const UserReview = (props) => {
   // const [user, setUser] = useState({})
   // useEffect(()=>{
@@ -10,7 +11,6 @@ const UserReview = (props) => {
   //         const response = await fetch("http://localhost:5000/users/name/Ste")
   //         const data = await response.json();
   //         setUser(data)
-
   //     }
   //     getData()
   // },[]);
@@ -28,3 +28,4 @@ const UserReview = (props) => {
 };
 
 export default UserReview;
+

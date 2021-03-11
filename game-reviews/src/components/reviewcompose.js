@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import "./reviewcompose.css";
 
-
-
-
-const ReviewCompose = () => {
+const ReviewCompose = (props) => {
 
 const [reviewBody, setReview] = useState("");
 
