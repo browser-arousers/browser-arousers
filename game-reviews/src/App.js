@@ -1,15 +1,25 @@
 import React from "react";
-import {BrowserRouter as Router} from 'react-router-dom';
-import HomeBanner from "./components/home-banner";
-import Navbar from "./components/navbar";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import HomeBanner from "./components/home-banner"
+import Navbar from "./components/navbar"
+import Signup from "./components/Signup"
+import './App.css';
 import CriticReview from "./components/criticReview";
 
-import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <HomeBanner/>
+          </Route>
+          <Route exact path="/Signup">
+            <Signup />
+            </Route>
+        </Switch>
         <Navbar/>
       <HomeBanner />
       <CriticReview 
