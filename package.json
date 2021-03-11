@@ -4,7 +4,11 @@
   "description": "browser-arousers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "node index.js",
+    "frontend": "npm start --prefix game-reviews",
+    "bootstrap": "npm install --include=dev && cd game-reviews && npm install --include=dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "repository": {
     "type": "git",
@@ -18,9 +22,13 @@
   },
   "homepage": "https://github.com/browser-arousers/browser-arousers#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^4.6.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.19"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
 }
