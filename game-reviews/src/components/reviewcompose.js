@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import "./reviewcompose.css";
-import Review from "./game1review";
-
-const Review = Review.body;
-console.log(Review)
 
 const ReviewCompose = (props) => {
 
@@ -17,9 +13,9 @@ const handleSubmit = () => {
   setReview("");
 }
 
-  constructor(props) {
-    super(props)
-  };
+//   constructor(props) {
+//     super(props)
+//   };
 
   return (
 
