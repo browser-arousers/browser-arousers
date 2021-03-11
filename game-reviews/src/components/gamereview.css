@@ -1,0 +1,40 @@
+.reviewBody{
+    border: slategray solid 2px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    max-height: 400px;
+}
+
+.profilePic {
+    max-width: 50px;
+    max-height: 50px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.userName{
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.review{
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.score{
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.ageRange{
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.timeStamp{
+    grid-column-start: 1;
+    grid-row-start: 4;
+}
