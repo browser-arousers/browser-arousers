@@ -1,22 +1,19 @@
-// import "criticReview.css";
+import "./criticReview.css";
 
-const CriticReview = () => {
+const CriticReview = (props) => {
   return (
     <div className="criticReview">
-      <div className="TopSection">
-        <img className="cover"></img>
-        <h1 className="gameTitle">Super Mario</h1>
+     
+        <img className="cover" alt="none" src={props.review.src}></img>
+        <h1 className="title">{props.review.title}</h1>
+   
+        <p className="body">{props.review.body}</p>
+        <h2 className="score">{props.review.score}</h2>
+        <h2 className="ageRange">{props.review.agerange}</h2>
+    
+        <h3 className="author">{props.review.author}</h3>
+        <h3 className="timestamp">{props.review.timestamp}</h3>
       </div>
-      <div className="MainSection">
-        <p className="body"></p>
-        <h2 className="score"></h2>
-        <h2 className="ageRange"></h2>
-      </div>
-      <div className="BottomSection">
-        <h3 className="author"></h3>
-        <h3 className="timestamp"></h3>
-      </div>
-    </div>
   );
 };
 
