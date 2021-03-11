@@ -1,4 +1,4 @@
-import "criticReview.css";
+// import "criticReview.css";
 
 const CriticReview = () => {
   return (

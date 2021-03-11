@@ -10,6 +10,10 @@ export default function Signup(props) {
     const [password, setPassword] = useState("");
     const [passwordCheck, setPasswordCheck] = useState("")
 
+    const sendDetailsToServer = () => {
+        
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if(state.password === state.confirmPassword) {
