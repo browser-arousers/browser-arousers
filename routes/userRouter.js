@@ -16,12 +16,14 @@ router.get('/', (req, res) => {
 });
 router.post('/login', (req, res) => {
     res.status(200).json({ "msg": "online, working" })
+    // if pw input === pw stored in DB, allow login?
+    // else - error - "PW dont match"
 });
 
 router.post('/register', (req, res) => {
-    if (req.body.password === req.body.passwordverify) {
+    if (req.body.password === req.body.passwordCheck) {
         bcrypt.hash(req.body.password, 10, (err, hash) => {
-            const data = { "name": req.body.name, "email": req.body.email, "password": hash };
+            const data = { "username": req.body.username, "email": req.body.email, "password": hash, "passwordCheck":hash};
             new User(data).save((err, obj) => {
                 if (err) {
                     res.status(500).json({ "msg": err });
@@ -29,7 +31,6 @@ router.post('/register', (req, res) => {
                     res.status(200).json(obj);
                 }
             });
-            // res.status(200).json({ "msg": "all good", data: { name: req.body.name, email: req.body.email, hash: hash } })
         });
     } else {
         res.status(401).json({ "msg": "passwords dont match" })
