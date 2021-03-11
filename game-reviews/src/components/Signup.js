@@ -3,25 +3,29 @@ import axios from 'axios';
 import './Signup.css';
 
 export default function Signup(props) {
-    const [state, setState] = useState({
-        username: "",
-        email: "",
-        password: "",
-        passwordCheck: ""
-    });
-
-    const sendDetailsToServer = () => {
-        axios.post('http://localhost:5000/users/register', {
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [passwordCheck, setPasswordCheck] = useState("");
+    const sendDetailsToServer = (e) => {
+        e.preventDefault();
+        const data = {
             username: username,
             email: email,
             password: password,
             passwordCheck: passwordCheck,
+            }
+            console.log(data);
+        axios.post({
+            url:"http://localhost:5000/users/register",
+            mode:"cors",
+            data:data
         })
     }
 
     const handleSubmit = (event) => {
         if (event.target.id === "username") {
-            setUser(event.target.value)
+            setUsername(event.target.value)
         } else if (event.target.id === "email") {
             setEmail(event.target.value)
         } else if (event.target.id === "password") {
@@ -32,16 +36,23 @@ export default function Signup(props) {
     }
     return (
         <div>
-            <form className="form-group">
+            <form className="form-group" onSubmit={sendDetailsToServer}>
+                
 
                 <label>Username</label>
-                <input type="username"
+                <input
+                    id="username"
+                    onChange={handleSubmit}
+                    type="text"
                     className="formInput"
                     placeholder="Enter Username"
                 />
 
                 <label>Email Address</label>
-                <input type="email"
+                <input
+                    id="Email"
+                    onChange={handleSubmit}
+                    type="email"
                     className="formInput"
                     placeholder="Enter email"
                 />
@@ -52,7 +63,10 @@ export default function Signup(props) {
 
                 <div className="form-group">
                     <label> Password </label>
-                    <input type="password"
+                    <input
+                        id="password"
+                        onChange={handleSubmit}
+                        type="password"
                         className="formInput"
                         placeholder="Password">
                     </input>
@@ -60,13 +74,17 @@ export default function Signup(props) {
 
                 <div className="form-group">
                     <label> Confirm Password </label>
-                    <input type="password"
+                    <input
+                        id="passwordCheck"
+                        onChange={handleSubmit}
+                        type="password"
                         className="formInput"
                         placeholder="Confirm Password">
                     </input>
                 </div>
 
-                <button type="submit"
+                <button
+                    type="submit"
                     className="submit-btn"
                 >
                     Sign Up

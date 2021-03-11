@@ -20,7 +20,6 @@ function App() {
             <Signup />
             </Route>
         </Switch>
-        <Navbar/>
       <HomeBanner />
       <CriticReview 
       //couldn't get the image source to show using "../public/images/3d-world-mario-banner.jpg" for some reason. Does it need to be imported in?

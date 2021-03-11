@@ -21,6 +21,7 @@ router.post('/login', (req, res) => {
 });
 
 router.post('/register', (req, res) => {
+    console.log("got here");
     if (req.body.password === req.body.passwordCheck) {
         bcrypt.hash(req.body.password, 10, (err, hash) => {
             const data = { "username": req.body.username, "email": req.body.email, "password": hash, "passwordCheck":hash};
