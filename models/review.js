@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Review = new mongoose.Schema({
-    gameTitle:{type:String,required:true},
+    title:{type:String,required:true},
     author:{type:String,required:true},
     body:{type:String,required:true},
 });
