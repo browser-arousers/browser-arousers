@@ -1,7 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import HomeBanner from "./components/home-banner";
-import Navbar from "./components/navbar";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import HomeBanner from "./components/home-banner"
+import Navbar from "./components/navbar"
+import Signup from "./components/Signup"
+import './App.css';
 import CriticReview from "./components/criticReview";
 import UserReview from "./components/gamereview";
 // import ReviewCompose from"./components/reviewcompose";
@@ -15,8 +17,16 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <HomeBanner />
-        <CriticReview
+        <Switch>
+          <Route exact path="/">
+            <HomeBanner/>
+          </Route>
+          <Route exact path="/Signup">
+            <Signup />
+            </Route>
+        </Switch>
+      <HomeBanner />
+      <CriticReview
           //couldn't get the image source to show using "../public/images/3d-world-mario-banner.jpg" for some reason. Does it need to be imported in?
           review={{
             title: "Super Mario 3D World",
