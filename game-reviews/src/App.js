@@ -5,7 +5,7 @@ import Navbar from "./components/navbar"
 import Signup from "./components/Signup"
 
 import './App.css';
-import CriticReview from "./components/criticReview";
+// import CriticReview from "./components/criticReview";
 
 function App() {
   return (

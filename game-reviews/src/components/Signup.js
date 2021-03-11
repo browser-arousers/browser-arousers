@@ -1,33 +1,40 @@
 import { useState } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import './Signup.css';
-import React from 'react';
 
 export default function Signup(props) {
-
-    const [username, setUser] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [passwordCheck, setPasswordCheck] = useState("")
+    const [state, setState] = useState({
+        username: "",
+        email: "",
+        password: "",
+        passwordCheck: ""
+    });
 
     const sendDetailsToServer = () => {
-        
+        axios.post('http://localhost:5000/users/register', {
+            username: username,
+            email: email,
+            password: password,
+            passwordCheck: passwordCheck,
+        })
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if(state.password === state.confirmPassword) {
-            sendDetailsToServer()
-        } else {
-            props.showError('Passwords do not match')
+    const handleSubmit = (event) => {
+        if (event.target.id === "username") {
+            setUser(event.target.value)
+        } else if (event.target.id === "email") {
+            setEmail(event.target.value)
+        } else if (event.target.id === "password") {
+            setPassword(event.target.value)
+        } else if (event.target.id === "passwordCheck") {
+            setPasswordCheck(event.target.value)
         }
     }
-
     return (
         <div>
             <form className="form-group">
 
-            <label>Username</label>
+                <label>Username</label>
                 <input type="username"
                     className="formInput"
                     placeholder="Enter Username"
