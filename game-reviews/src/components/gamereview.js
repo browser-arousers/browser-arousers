@@ -10,4 +10,4 @@ const UserReview = () => {
     );
 };
 
-export default Review;
+export default UserReview;
