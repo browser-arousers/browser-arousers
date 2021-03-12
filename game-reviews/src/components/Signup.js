@@ -38,7 +38,8 @@ export default function Signup(props) {
     }
     return (
         <div>
-            <form className="form-group" onSubmit={sendDetailsToServer}>
+            <h1 className="page-header">Create a user account</h1>
+            <form className="form-container" onSubmit={sendDetailsToServer}>
                 
                 <div className="form-group">
                 <label>Username</label>
@@ -92,7 +93,7 @@ export default function Signup(props) {
 
                 <button
                     type="submit"
-                    className="submit-btn"
+                    className="btn btn-primary"
                 >
                     Sign Up
                     </button>
