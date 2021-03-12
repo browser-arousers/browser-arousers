@@ -15,10 +15,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: none;
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
 
+p {
+   padding-bottom: 1em;
+}
+
+a {
+   text-decoration: none;
+}
 
 /***** Colours *****/
 /* All colours can be used using var(--colourYouWant) */
@@ -60,12 +67,14 @@ h2 {
 /***** Buttons *****/ 
 
 .btn {
+   display: inline-block;
    font-size: 1.125rem;
    font-family: 'Roboto', Arial, Helvetica, sans-serif;
    font-weight: 600;
    cursor: pointer;
    border: none;
-   padding: 2em 1em;
+   border-radius: 5px;
+   padding: 1em 1em;
 }
 
 .btn-primary {
