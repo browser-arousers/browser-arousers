@@ -17,7 +17,7 @@ export default function Signup(props) {
             }
             console.log(data);
         axios({
-            method: "POST",
+            method:'POST',
             url:"http://localhost:5000/users/register",
             mode:'cors',
             data:data
