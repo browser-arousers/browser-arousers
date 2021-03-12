@@ -40,7 +40,7 @@ export default function Signup(props) {
         <div>
             <form className="form-group" onSubmit={sendDetailsToServer}>
                 
-
+                <div className="form-group">
                 <label>Username</label>
                 <input
                     id="username"
@@ -49,7 +49,10 @@ export default function Signup(props) {
                     className="formInput"
                     placeholder="Enter Username"
                 />
+                </div>
 
+
+                <div className="form-group">
                 <label>Email Address</label>
                 <input
                     id="email"
@@ -58,6 +61,8 @@ export default function Signup(props) {
                     className="formInput"
                     placeholder="Enter email"
                 />
+                </div>
+                
                 <div className="emailHelp">
                     We'll never share your email with anyone else.
                 </div>

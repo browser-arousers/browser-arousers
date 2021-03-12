@@ -1,4 +1,18 @@
 form{
     color: white;
     text-align: center;
+    margin-top: 20%;
+}
+
+.emailHelp{
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.form-group{
+    margin-top: 40px;
+}
+
+.submit-btn{
+    margin-top: 20px;
 }
