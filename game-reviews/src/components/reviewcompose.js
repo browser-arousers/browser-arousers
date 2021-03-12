@@ -6,17 +6,22 @@ import "./reviewcompose.css";
 const ReviewCompose = (props) => {
   const [body, setBody] = useState([]);
   const [title, setTitle] = useState([]);
+  const [score, setScore] = useState([]);
+  const [ageRange, setAgeRange] = useState([]);
+  const [timestamp , setTimestamp] = useState([]);
 
   const sendDetailsToServer = (e) => {
     e.preventDefault();
     const data = {
       body: body,
       title: title,
+      score: score,
+      ageRange: ageRange,
+      timestamp: timestamp,
     };
     console.log(data);
-    axios.post({
+    axios({
       method: "POST",
-      //url location to be determined:
       url: "http://localhost:5000/review/addreview",
       mode: "cors",
       data: data,
@@ -28,8 +33,14 @@ const ReviewCompose = (props) => {
       setBody(event.target.value)
     } else if (event.target.id === "title") {
       setTitle(event.target.value)
+    } else if (event.target.id === "score") {
+      setScore(event.target.value) 
+    } else if (event.target.id === "ageRange") {
+      setAgeRange(event.target.value) 
+    } else if (event.target.id === "timestamp") {
+      setTimestamp(event.target.value) 
     }
-  };
+  } ;
 
   return (
     <div className="reviewComposeSection">
@@ -43,7 +54,8 @@ const ReviewCompose = (props) => {
                     type="text"
                     className="formInput"
                     placeholder="Review Title"
-                />
+                ></input>
+                <br/>
         
         <div className="inputText">
           <TextareaAutosize
@@ -55,9 +67,35 @@ const ReviewCompose = (props) => {
             wrap="hard"
             onChange={handleSubmit}
           />
+           <br/>
+           <input
+                    id="score"
+                    onChange={handleSubmit}
+                    type="text"
+                    className="formInput"
+                    placeholder="Score out of 10"
+                />
+                 <br/>
+             <input
+                    id="ageRange"
+                    onChange={handleSubmit}
+                    type="text"
+                    className="formInput"
+                    placeholder="Suggested age range"
+                />
+                 <br/>
+             <input
+             //ideal world this would use a timestamp function
+                    id="timestamp"
+                    onChange={handleSubmit}
+                    type="text"
+                    className="formInput"
+                    placeholder="Time of Review"
+                />
+            
 
-          <div className="reviewComposeButton">
-            <button className="reviewButton" type="submit">
+          <div>
+            <button className="btn btn-primary" type="submit">
               Submit
             </button>
           </div>

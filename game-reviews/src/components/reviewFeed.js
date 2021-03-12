@@ -20,7 +20,7 @@ const ReviewFeed = (props) => {
     
     const reviewItems = reviews.map((review, index) => {
         return(
-            <li key={index}>{review.title}</li>
+            <li key={index}>{review.title}, {review.body}, {review.score}, {review.ageRange}, {review.timestamp}</li>
         )
     });
 
