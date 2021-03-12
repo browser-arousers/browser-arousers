@@ -6,7 +6,7 @@ import Signup from "./components/Signup"
 import './App.css';
 import CriticReview from "./components/criticReview";
 import UserReview from "./components/gamereview";
-// import ReviewCompose from"./components/reviewcompose";
+import ReviewCompose from"./components/reviewcompose";
 
 import "./App.css";
 // import ReviewFeed from "./components/reviewFeed";
@@ -49,8 +49,7 @@ function App() {
             timeStamp: "5 oclock",
           }}
         />
-        {/* <ReviewCompose />
-        <ReviewFeed reviewList={reviewList} /> */}
+        <ReviewCompose />
       </Router>
     </div>
   );
