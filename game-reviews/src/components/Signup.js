@@ -22,6 +22,7 @@ export default function Signup(props) {
             mode:'cors',
             data:data
         });
+        return alert(`${username} registered successfully`)
 
     }
 
