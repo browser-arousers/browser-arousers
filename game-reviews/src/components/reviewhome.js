@@ -1,7 +1,8 @@
 import React from 'react'
 import CriticReview from './criticReview';
 import GameReview from './gamereview';
-import ReviewCompose from "./reviewcompose"
+import ReviewCompose from "./reviewcompose";
+import ReviewFeed from "./reviewFeed";
 
 export default function reviewhome() {
     return (
@@ -29,7 +30,9 @@ export default function reviewhome() {
             timeStamp: "5 oclock",
           }}
         />
+        <ReviewFeed />
         <ReviewCompose />
+        
             
         </div>
     )
