@@ -7,6 +7,7 @@ import './App.css';
 import CriticReview from "./components/criticReview";
 import UserReview from "./components/gamereview";
 import ReviewCompose from"./components/reviewcompose";
+import ReviewFeed from "./components/reviewFeed";
 
 import "./App.css";
 // import ReviewFeed from "./components/reviewFeed";
@@ -26,6 +27,7 @@ function App() {
             </Route>
         </Switch>
       <HomeBanner />
+      <ReviewFeed />
       <CriticReview
           //couldn't get the image source to show using "../public/images/3d-world-mario-banner.jpg" for some reason. Does it need to be imported in?
           review={{

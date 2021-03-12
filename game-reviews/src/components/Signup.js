@@ -52,7 +52,7 @@ export default function Signup(props) {
 
                 <label>Email Address</label>
                 <input
-                    id="Email"
+                    id="email"
                     onChange={handleSubmit}
                     type="email"
                     className="formInput"
