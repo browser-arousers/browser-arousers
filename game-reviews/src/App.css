@@ -1,0 +1,87 @@
+/***** Global CSS *****/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+html {
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background: var(--mainBckgr);
+  color: var(--darkFont);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: none;
+}
+
+
+/***** Colours *****/
+/* All colours can be used using var(--colourYouWant) */
+
+:root {
+   /* Main colors */
+  --mainBckgr: #fff;
+  --secondaryBckgr: #333; /*right sidebar bckgr, search field, dark button bckg */
+  --redAccent: red;
+  --greenAccent: green;
+  --darkerRed: darkred; /* hover effects */
+  --darkerGreen: darkgreen; /* hover effects */
+  --lightFont: #fff; /* main font, light icons */
+  --darkFont: #333; /* secondary font, dark grey icons, interaction bar */
+  
+  /* feature colors */
+  --reviewStars: yellow;
+}
+
+
+/***** Fonts *****/ 
+
+h1 {
+  font-size: 1.953rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.563rem;
+  font-weight: 600;
+}
+
+/* h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+} */
+
+
+/***** Buttons *****/ 
+
+.btn {
+   font-size: 1.125rem;
+   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   cursor: pointer;
+   border: none;
+   padding: 2em 1em;
+}
+
+.btn-primary {
+  background: var(--greenAccent);
+  color: var(--lightFont); 
+}
+
+.btn-primary:hover {
+   background: var(--darkerGreen);
+ }
+
+.btn-secondary { 
+  background: var(--redAccent);
+  color: var(--lightFont);
+}
+
+.btn-secondary:hover {
+   background: var(--darkerRed);
+ }
