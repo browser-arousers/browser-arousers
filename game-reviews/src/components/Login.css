@@ -1,13 +1,6 @@
-form{
-    color: white;
+.page-header {
+    font-size: 1.953rem;
     text-align: center;
+    padding: 1em 0;
 }
 
-form{
-    padding: 0;
-    margin: 0;
-}
-
-h2{
-    text-align: center;
-}
