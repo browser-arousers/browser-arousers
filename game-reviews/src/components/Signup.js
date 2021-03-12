@@ -16,7 +16,8 @@ export default function Signup(props) {
             passwordCheck: passwordCheck,
             }
             console.log(data);
-        axios.post({
+        axios({
+            method: "POST",
             url:"http://localhost:5000/users/register",
             mode:"cors",
             data:data
@@ -50,7 +51,7 @@ export default function Signup(props) {
 
                 <label>Email Address</label>
                 <input
-                    id="Email"
+                    id="email"
                     onChange={handleSubmit}
                     type="email"
                     className="formInput"
