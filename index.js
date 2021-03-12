@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const gamesRouter = require('./routes/gamesRouter');
+const reviewRouter = require('./routes/reviewRouter');
 const userRouter = require('./routes/userRouter');
 const cors = require('cors');
 require("dotenv").config();
@@ -22,7 +22,7 @@ connection.once('open', function () {
     console.log('MongoDB database connection established successfully!');
 })
 
-app.use("/games", gamesRouter);
+app.use("/review", reviewRouter);
 app.use("/users", userRouter);
 
 app.listen(5000, () => {
