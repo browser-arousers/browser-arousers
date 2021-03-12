@@ -2,14 +2,19 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const reviewRouter = require('./routes/reviewRouter');
-const userRouter = require('./routes/userRouter');
-const cors = require('cors');
+const apiRouter = require('./routes/routes');
+const cors = require('cors')
 require("dotenv").config();
+
+app.use(cors())
+
+const reviewRouter = require('./routes/reviewRouter');
+const userRouter = require('./routes/userRouter')
 
 app.use(cors({credentials:true, origin: ['http://localhost:3000']}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
 
 mongoose.connect(`mongodb+srv://${process.env.mongoUser}:${process.env.mongoPassword}@cluster0.emj0a.mongodb.net/${process.env.mongoDB}?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
