@@ -1,0 +1,17 @@
+.banner-home {
+   padding: 6em 0;
+   width: 70vw;
+   margin: 0 auto;
+}
+
+.banner-home-content {
+   width: 50%;
+}
+
+.banner-home-content h1 {
+   padding-bottom: 1em;
+}
+
+.banner-home-content .btn {
+   margin: 1em 0;
+}
