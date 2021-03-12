@@ -16,7 +16,7 @@ export default function Navbar() {
                     <a href="/" className="navLogo">
                         <h3>P</h3>
                         <h3 className="G1">G</h3>
-                        <p>tips</p>
+                        <p className="tips">tips</p>
                     </a>
                     <div className = "menu-icon" onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

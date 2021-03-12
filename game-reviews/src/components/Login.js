@@ -2,6 +2,8 @@ import React from 'react'
 import './Login.css'
 
 export default function Login() {
+
+
     return (
         <div>
             <h2>Login</h2>
@@ -24,6 +26,7 @@ export default function Login() {
                         className="formInput"
                         placeholder="Password">
                     </input>
+                    </div>
 
                     <button
                     type="submit"
@@ -31,7 +34,6 @@ export default function Login() {
                 >
                     Login
                     </button>
-                </div>
             </form>
         </div>
     )
