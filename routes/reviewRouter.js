@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
     console.log("got here");
         const text = req.body.text;
         const title = req.body.title;
-        new Review({body:text, title:title}).save((err, obj) => {
+        new Review({"body":text, "title":title}).save((err, obj) => {
             if (err) {
                 res.status(500).json({ "msg": err});
             } else {
