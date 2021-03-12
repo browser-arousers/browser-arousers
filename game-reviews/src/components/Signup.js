@@ -16,11 +16,13 @@ export default function Signup(props) {
             passwordCheck: passwordCheck,
             }
             console.log(data);
-        axios.post({
+        axios({
+            method:'POST',
             url:"http://localhost:5000/users/register",
-            mode:"cors",
+            mode:'cors',
             data:data
-        })
+        });
+
     }
 
     const handleSubmit = (event) => {
