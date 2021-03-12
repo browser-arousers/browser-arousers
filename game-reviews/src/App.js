@@ -4,6 +4,7 @@ import Navbar from "./components/navbar"
 import Signup from "./components/Signup"
 import Home from "./components/reviewhome"
 import HomeBanner from "./components/home-banner";
+import Login from "./components/Login"
 import './App.css';
 // import CriticReview from "./components/criticReview";
 // import UserReview from "./components/gamereview";
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
             <Navbar />
       <BrowserRouter>
+      <Route exact path ="/Login" component={Login}/>
       <Route exact path ="/" component={HomeBanner}/>
         <Route exact path="/Signup" component={Signup}/>
         <Route exact path="/Reviews" component={Home}></Route>
