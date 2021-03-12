@@ -1,0 +1,106 @@
+/***** Global CSS *****/
+/* - Currently all set up for Twitter - To be used once we agree on a styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');u
+
+html {
+  font-size: 16;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--mainBckgr);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  color: var(--lightGrey);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+  margin-bottom: none;
+}
+
+i {
+  color: var(--lightGrey);
+} */
+
+/***** Colours *****/
+/* All colours can be used using var(--colourYouWant) */
+
+:root {
+  --mainBckgr: #000;
+  --secondaryBckgr: #191c22; /*right sidebar bckgr, search field, dark button bckg */
+  --blueAccent: #1da1f2;
+  --inactiveIcon: #0e5179;
+  --blueIconHover: #031019;
+  --lightGrey: #d9d9d9; /* main font, light icons */
+  --darkGrey: #6E767D; /* secondary font, dark grey icons, interaction bar */
+  --buttonFont: #fff;
+  
+  /* interaction bar */
+  --comment: #1da1f2; /*same for share button */
+  --commentHover: #0e5179; /*same for share button */
+  --retweet: #17bf63;
+  --retweetHover: #091B11;
+  --like: #e0245e;
+  --likeHover: #420e1e;
+
+}
+
+
+/***** Fonts *****/ 
+/* used for: main header, right sidebar header, messages header */
+
+/* h1 {
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 25px;
+} */
+
+/* navbar on desktop,  */
+/* h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+} */
+
+/* profile name, right sidebar title */
+/* h3 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+} */
+
+/* main text/feed text */
+/* .mainText {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+} */
+
+/* secondary text (dark grey) */
+/* .secondaryText {
+  color: var(--darkGrey);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+} */
+
+/* mentions, hashtags, show more on the sidebar */
+/* .blueText {
+  color: var(--blueAccent);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.darkButton {
+  background: var(--secondaryBckgr);
+  color: var(--blueAccent); 
+}
+
+.blueButton { 
+  background: var(--blueAccent);
+  color: var(--buttonFont);
+} */

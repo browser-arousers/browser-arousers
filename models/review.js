@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
+//would the user name and timestamp be declared here at all?
 const Review = new mongoose.Schema({
-    title:{type:String,required:true},
-    author:{type:String,required:true},
-    body:{type:String,required:true},
+    reviewBody:{type:String,required:true},
+    
 });
 
-module.exports = mongoose.model('games', Review);
+module.exports = mongoose.model('reviews', Review);
