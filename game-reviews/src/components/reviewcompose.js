@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import axios from "axios";
 import "./reviewcompose.css";
