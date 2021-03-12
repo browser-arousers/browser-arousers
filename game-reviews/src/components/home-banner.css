@@ -1,0 +1,29 @@
+.banner-home {
+   max-width: 100%;
+	height: auto;
+   background-image:  linear-gradient(
+      rgba(95, 99, 94, 0.8),
+      rgba(95, 99, 94, 0.8)), url("https://images.unsplash.com/photo-1584651766658-1b7b47a2cb79?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2008&q=80");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   padding: 10em 0;
+}
+
+.banner-home-content {
+   width: 70%;
+   margin: 0 auto;
+   color: var(--lightFont);
+}
+
+.banner-home-content h1 {
+   padding-bottom: 0.5em;
+}
+
+.banner-home-content p {
+   font-size: 1.125rem;
+}
+
+.banner-home-content .btn {
+   margin: 1em 0;
+}
