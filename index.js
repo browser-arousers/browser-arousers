@@ -6,8 +6,12 @@ const apiRouter = require('./routes/routes');
 const cors = require('cors')
 require("dotenv").config();
 
-
 app.use(cors())
+
+const reviewRouter = require('./routes/reviewRouter');
+const userRouter = require('./routes/userRouter')
+
+app.use(cors({credentials:true, origin: ['http://localhost:3000']}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -23,8 +27,9 @@ connection.once('open', function () {
     console.log('MongoDB database connection established successfully!');
 })
 
-app.use("/", apiRouter);
+app.use("/review", reviewRouter);
+app.use("/users", userRouter);
 
-app.listen(3000, () => {
+app.listen(5000, () => {
     console.log("Online");
 });

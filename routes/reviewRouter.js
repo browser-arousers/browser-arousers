@@ -16,24 +16,20 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
-    Review.find({}, (err, reviews) => {
-        if (err) {
-            console.log(err);
-            res.status(500).json({ "msg": err });
-        } else {
-            res.status(200).json(reviews);
-        }
-    });
-});
 
-//need to have a post for adding a new user to the database
+//need to have a post for adding a new review to the database
 //should have user information and a timestamp but not sure on how
-router.post('/addreview', (req, res) => {
+router.post('/', (req, res) => {
     console.log("got here");
-        let newReview = req.body.Review;
-        let review = new Review({review:newReview});
-        review.save();
+        const text = req.body.text;
+        const title = req.body.title;
+        new Review({body:text, title:title}).save((err, obj) => {
+            if (err) {
+                res.status(500).json({ "msg": err});
+            } else {
+                res.status(200).json(obj);
+            }
+        });
 });
 
 //need a .delete for deleting a post 

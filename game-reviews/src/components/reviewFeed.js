@@ -1,29 +1,33 @@
 // import "./reviewFedd.css"
 // import GameReview from "./gamereview"
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const ReviewFeed = (props) => {
 
-    //so not entirely sure how to call data from React front end if I'm honest
-    //fetch ('data') seems too vague 
-async function getReview() {
-    const response = await fetch('');
-    const data = await response.json();
+    const [reviews, setReviews] = useState([])
+    useEffect(() => {
+        async function getData(){
+            const url = "http://localhost:5000/review";
+            await axios({url:url, mode:"cors"}).then((response) => {
+                setReviews(response.data);
+                localStorage.setItem("username", "rob");
+                console.log(localStorage.getItem("username"));
+            })
+        }
+        getData()
+    }, [])
     
-} 
-
-
-//     const createReviewComponents = (reviews) => {
-//         if (reviews.length === 0) 
-//             return 
-//                 <p>There are no reviews available</p>;
-//         return reviews.map((review) => <GameReview key={reviews.id} review={review}/>);
-//     }
-
-//     // const reviewComponents = createReviewComponents(reviewList);
+    const reviewItems = reviews.map((review, index) => {
+        return(
+            <li key={index}>{review.title}</li>
+        )
+    });
 
     return(
         <div className="reviewContainer">
-            {reviewComponents}
+            <h1>Review here</h1>
+            <ul>{reviewItems}</ul>
         </div>
     )
 
